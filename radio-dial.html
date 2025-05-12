@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estação Saudade - Dial Vintage</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .dial-container {
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    .dial-select {
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #fffaf0;
+      border: 2px solid #c4b197;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 90%;
+    }
+
+    .station-label {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #5a3e2b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/cabecalho.jpg" alt="Cabeçalho da Estação Saudade" />
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="radio.html">Rádio</a></li>
+        <li><a href="#">Reflexões</a></li>
+        <li><a href="#">Envie sua carta</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <h1>🎚️ Dial Vintage – Sintonize sua saudade</h1>
+      <div class="dial-container">
+        <label for="dial" style="font-size: 18px;">Escolha uma estação:</label><br/>
+        <select id="dial" class="dial-select" onchange="trocarEstacao()">
+          <option value="">-- Gire o dial --</option>
+          <option value="http://listen.181fm.com/181-classichits_64k.aac">181.fm – Classic Hits (USA)</option>
+          <option value="http://213.141.131.10:8000/pop80">Radio Caprice – 80s Pop (Rússia)</option>
+          <option value="http://162.244.80.106:11172/stream">Oldies America (USA)</option>
+          <option value="http://streaming.radio.co/s9cba1db97/listen">Retro Hits USA</option>
+        </select>
+        <div class="station-label" id="stationName">Nenhuma estação selecionada</div>
+        <audio id="player" controls autoplay></audio>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Estação Saudade. Sintonize a paz.</p>
+  </footer>
+
+  <script>
+    function trocarEstacao() {
+      const player = document.getElementById("player");
+      const dial = document.getElementById("dial");
+      const stationName = dial.options[dial.selectedIndex].text;
+      player.src = dial.value;
+      document.getElementById("stationName").textContent = stationName || "Nenhuma estação selecionada";
+    }
+  </script>
+</body>
+</html>
