@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EstaÃ§Ã£o Saudade - RÃ¡dio RetrÃ´</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #fdf8f3;
+      font-family: 'Georgia', serif;
+    }
+
+    .content {
+      text-align: center;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .radio-wrapper {
+      background: #d6c9b7;
+      border: 8px solid #aa9d8b;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .scale {
+      position: relative;
+      height: 60px;
+      margin: 20px auto 10px;
+      background: #fff;
+      border: 2px solid #8c7c68;
+      border-radius: 8px;
+    }
+
+    .scale-marker {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #000;
+    }
+
+    .needle {
+      position: absolute;
+      top: -10px;
+      height: 80px;
+      width: 4px;
+      background: red;
+      left: 0;
+      transition: left 0.3s ease;
+    }
+
+    .station-label {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .stations {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px;
+      font-size: 12px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #5e4b3c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e3027;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>ðŸ“» EstaÃ§Ã£o Saudade â€“ RÃ¡dio RetrÃ´</h1>
+
+    <div class="radio-wrapper">
+      <div class="station-label" id="stationName">Nenhuma estaÃ§Ã£o sintonizada</div>
+
+      <div class="scale" id="scale">
+        <div class="needle" id="needle"></div>
+        <div class="stations">
+          <span>Retro Hits</span><span>Oldies</span><span>Disco</span><span>Rock 80s</span><span>Pop 90s</span>
+        </div>
+      </div>
+
+      <button onclick="sintonizarAnterior()">â—€</button>
+      <button onclick="sintonizarProxima()">â–¶</button>
+
+      <audio id="player" controls autoplay></audio>
+    </div>
+  </div>
+
+  <script>
+    const stations = [
+      { name: "181.fm â€“ Classic Hits", stream: "https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3" },
+      { name: "181.fm â€“ Old School", stream: "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" },
+      { name: "181.fm â€“ The Beat (Disco)", stream: "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3" },
+      { name: "181.fm â€“ 80s Hairband", stream: "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3" },
+      { name: "181.fm â€“ Lite 90s", stream: "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3" }
+    ];
+
+    let currentStation = 0;
+
+    function atualizarRadio() {
+      const player = document.getElementById("player");
+      const name = document.getElementById("stationName");
+      const needle = document.getElementById("needle");
+
+      const station = stations[currentStation];
+      player.src = station.stream;
+      name.textContent = station.name;
+
+      // movimenta a agulha proporcionalmente
+      const total = stations.length - 1;
+      const pos = (currentStation / total) * 100;
+      needle.style.left = `calc(${pos}% - 2px)`;
+    }
+
+    function sintonizarProxima() {
+      currentStation = (currentStation + 1) % stations.length;
+      atualizarRadio();
+    }
+
+    function sintonizarAnterior() {
+      currentStation = (currentStation - 1 + stations.length) % stations.length;
+      atualizarRadio();
+    }
+
+    window.onload = atualizarRadio;
+  </script>
+</body>
+</html>
