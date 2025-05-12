@@ -1,0 +1,76 @@
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4f1ee;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #e6dfd7;
+  padding: 15px;
+  border-right: 2px solid #b8a898;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #5a3e2b;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fffaf5;
+  border-left: 2px solid #ddd1c3;
+}
+
+.content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.frase-do-dia {
+  font-style: italic;
+  color: #6a4e3b;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #d9d3c8;
+  border-top: 2px solid #b8a898;
+}
