@@ -4,28 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EstaÃ§Ã£o Saudade - RÃ¡dio RetrÃ´</title>
+  <title>Estação Saudade - Dial Retrô</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      background-color: #fdf8f3;
-      font-family: 'Georgia', serif;
-    }
-
     .content {
       text-align: center;
-      margin: 40px auto;
       padding: 20px;
     }
 
     .radio-wrapper {
-      background: #d6c9b7;
-      border: 8px solid #aa9d8b;
-      border-radius: 15px;
+      background: #f7f3ec;
+      border: 5px solid #c5b8a4;
+      border-radius: 12px;
       padding: 30px;
-      max-width: 700px;
       margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 700px;
     }
 
     .scale {
@@ -35,14 +28,6 @@
       background: #fff;
       border: 2px solid #8c7c68;
       border-radius: 8px;
-    }
-
-    .scale-marker {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 2px;
-      background-color: #000;
     }
 
     .needle {
@@ -55,17 +40,13 @@
       transition: left 0.3s ease;
     }
 
-    .station-label {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 15px 0;
-    }
-
     .stations {
       display: flex;
       justify-content: space-between;
       padding: 0 5px;
       font-size: 12px;
+      font-weight: bold;
+      color: #5a3e2b;
     }
 
     audio {
@@ -87,36 +68,65 @@
     button:hover {
       background-color: #3e3027;
     }
+
+    .station-label {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #4a392c;
+    }
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>ðŸ“» EstaÃ§Ã£o Saudade â€“ RÃ¡dio RetrÃ´</h1>
+  <header>
+    <img src="img/cabecalho.jpg" alt="Cabeçalho da Estação Saudade" />
+  </header>
 
-    <div class="radio-wrapper">
-      <div class="station-label" id="stationName">Nenhuma estaÃ§Ã£o sintonizada</div>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="radio.html">Rádio</a></li>
+        <li><a href="radio-dial-retro.html">Dial Retrô</a></li>
+        <li><a href="#">Reflexões</a></li>
+        <li><a href="#">Envie sua carta</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+    </aside>
 
-      <div class="scale" id="scale">
-        <div class="needle" id="needle"></div>
-        <div class="stations">
-          <span>Retro Hits</span><span>Oldies</span><span>Disco</span><span>Rock 80s</span><span>Pop 90s</span>
+    <main class="content">
+      <h1>📻 Estação Saudade – Rádio com Agulha</h1>
+
+      <div class="radio-wrapper">
+        <div class="station-label" id="stationName">Nenhuma estação sintonizada</div>
+
+        <div class="scale" id="scale">
+          <div class="needle" id="needle"></div>
+          <div class="stations">
+            <span>Oldies</span><span>Disco</span><span>Romântica</span><span>Rock 80s</span><span>Pop 90s</span>
+          </div>
         </div>
+
+        <button onclick="sintonizarAnterior()">◀</button>
+        <button onclick="sintonizarProxima()">▶</button>
+
+        <audio id="player" controls autoplay></audio>
       </div>
-
-      <button onclick="sintonizarAnterior()">â—€</button>
-      <button onclick="sintonizarProxima()">â–¶</button>
-
-      <audio id="player" controls autoplay></audio>
-    </div>
+    </main>
   </div>
+
+  <footer>
+    <p style="text-align:center; padding:20px;">&copy; 2025 Estação Saudade. Sintonize a paz.</p>
+  </footer>
 
   <script>
     const stations = [
-      { name: "181.fm â€“ Classic Hits", stream: "https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3" },
-      { name: "181.fm â€“ Old School", stream: "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" },
-      { name: "181.fm â€“ The Beat (Disco)", stream: "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3" },
-      { name: "181.fm â€“ 80s Hairband", stream: "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3" },
-      { name: "181.fm â€“ Lite 90s", stream: "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3" }
+      { name: "181.fm – Old School", stream: "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" },
+      { name: "181.fm – The Beat (Disco)", stream: "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3" },
+      { name: "181.fm – Lite 90s", stream: "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3" },
+      { name: "181.fm – 80s Hairband", stream: "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3" },
+      { name: "181.fm – Energy 93 (Pop 90s)", stream: "https://181fm-edge1.cdnstream.com/181-energy93_128k.mp3" }
     ];
 
     let currentStation = 0;
@@ -130,7 +140,6 @@
       player.src = station.stream;
       name.textContent = station.name;
 
-      // movimenta a agulha proporcionalmente
       const total = stations.length - 1;
       const pos = (currentStation / total) * 100;
       needle.style.left = `calc(${pos}% - 2px)`;
