@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.github.estacaosaudade",
+      "sha256_cert_fingerprints": [
+        "B9:46:61:C9:D6:92:AC:36:80:58:5E:4E:C4:D0:DB:20:9E:15:20:D0:4B:24:24:BE:33:39:8F:A4:52:B8:7D:9B"
+      ]
+    }
+  }
+]
