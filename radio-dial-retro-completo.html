@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,47 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Estação Saudade - Rádio Retrô</title>
   <style>
-    body {{
+    body {
       margin: 0;
       font-family: 'Georgia', serif;
       background-color: #fdf8f3;
-    }}
-    header {{
+    }
+    header {
       background: #8b6f47;
       padding: 20px;
       color: white;
       text-align: center;
-    }}
-    .container {{
+    }
+    .container {
       display: flex;
-    }}
-    .sidebar {{
+    }
+    .sidebar {
       width: 220px;
       background: #e8ddce;
       padding: 20px;
       height: 100vh;
       box-sizing: border-box;
-    }}
-    .sidebar h2 {{
+    }
+    .sidebar h2 {
       font-size: 18px;
       margin-top: 0;
-    }}
-    .sidebar ul {{
+    }
+    .sidebar ul {
       list-style: none;
       padding: 0;
-    }}
-    .sidebar li {{
+    }
+    .sidebar li {
       margin: 10px 0;
-    }}
-    .sidebar a {{
+    }
+    .sidebar a {
       text-decoration: none;
       color: #5a4330;
-    }}
-    .content {{
+    }
+    .content {
       flex: 1;
       padding: 20px;
-    }}
-    .radio-wrapper {{
+    }
+    .radio-wrapper {
       background: #d6c9b7;
       border: 8px solid #aa9d8b;
       border-radius: 15px;
@@ -54,16 +53,16 @@
       max-width: 700px;
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }}
-    .scale {{
+    }
+    .scale {
       position: relative;
       height: 60px;
       margin: 20px auto 10px;
       background: #fff;
       border: 2px solid #8c7c68;
       border-radius: 8px;
-    }}
-    .needle {{
+    }
+    .needle {
       position: absolute;
       top: -10px;
       height: 80px;
@@ -71,24 +70,24 @@
       background: red;
       left: 0;
       transition: left 0.3s ease;
-    }}
-    .station-label {{
+    }
+    .station-label {
       font-size: 20px;
       font-weight: bold;
       margin: 15px 0;
       color: #4a392c;
-    }}
-    .stations {{
+    }
+    .stations {
       display: flex;
       justify-content: space-between;
       padding: 0 5px;
       font-size: 12px;
-    }}
-    audio {{
+    }
+    audio {
       width: 100%;
       margin-top: 20px;
-    }}
-    button {{
+    }
+    button {
       margin-top: 15px;
       padding: 10px 20px;
       background-color: #5e4b3c;
@@ -97,17 +96,17 @@
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
-    }}
-    button:hover {{
+    }
+    button:hover {
       background-color: #3e3027;
-    }}
-    footer {{
+    }
+    footer {
       text-align: center;
       padding: 15px;
       background-color: #e0d4c3;
       font-size: 14px;
       margin-top: 20px;
-    }}
+    }
   </style>
 </head>
 <body>
@@ -132,7 +131,7 @@
         <div class="scale" id="scale">
           <div class="needle" id="needle"></div>
           <div class="stations">
-            <span>Retro</span><span>Oldies</span><span>Disco</span><span>Rock</span><span>Pop</span>
+            <span>Classic</span><span>OldSchool</span><span>Disco</span><span>Rock</span><span>Pop</span>
           </div>
         </div>
         <button onclick="sintonizarAnterior()">◀</button>
@@ -142,27 +141,29 @@
     </main>
   </div>
   <footer>
-    &copy; 2025 Estação Saudade. Todos os direitos reservados.
+    <p>&copy; 2025 Estação Saudade. Todos os direitos reservados.</p>
   </footer>
   <script>
     const stations = [
-      { "name": "181.fm – Classic Hits", "stream": "https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3" },
-      { "name": "181.fm – Old School", "stream": "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" },
-      { "name": "181.fm – The Beat (Disco)", "stream": "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3" },
-      { "name": "181.fm – 80s Hairband", "stream": "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3" },
-      { "name": "181.fm – Lite 90s", "stream": "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3" },
-      { "name": "1.FM - Disco Ball 70s & 80s", "stream": "https://strm112.1.fm/discoball_mobile_mp3" },
-      { "name": "Classic Hits 70s 80s 90s", "stream": "https://strm112.1.fm/classichits_mobile_mp3" },
-      { "name": "Oldies America", "stream": "http://162.244.80.106:11172/stream" },
-      { "name": "70s Great Hits", "stream": "https://stream.zeno.fm/5sy1eh8dx98uv" },
-      { "name": "Yacht Rockin Radio", "stream": "https://streaming.live365.com/a12370" },
-      { "name": "Retro Hits Canada", "stream": "https://streaming.live365.com/a32732" },
-      { "name": "All Time 70s 80s Greatest", "stream": "https://stream.zeno.fm/4xv17p0wuhhvv" },
-      { "name": "Éxitos 60s 70s 80s 90s", "stream": "https://stream.zeno.fm/y6tx2eb9x2zuv" },
-      { "name": "Radio Mágica 88.3 FM", "stream": "https://stream.zeno.fm/6yz8mvg98yzuv" },
-      { "name": "Radio 60 70 80", "stream": "https://stream.zeno.fm/71t2ybbsyg8uv" }
+      { name: "181.fm – Classic Hits", stream: "https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3" },
+      { name: "181.fm – Old School", stream: "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" },
+      { name: "181.fm – The Beat (Disco)", stream: "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3" },
+      { name: "181.fm – 80s Hairband", stream: "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3" },
+      { name: "181.fm – Lite 90s", stream: "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3" },
+      { name: "181.fm – The Eagle (Classic Rock)", stream: "https://181fm-edge1.cdnstream.com/181-eagle_128k.mp3" },
+      { name: "181.fm – Awesome 80s", stream: "https://181fm-edge1.cdnstream.com/181-awesome80s_128k.mp3" },
+      { name: "181.fm – Mellow Gold", stream: "https://181fm-edge1.cdnstream.com/181-mellow_128k.mp3" },
+      { name: "181.fm – Good Time Oldies", stream: "https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3" },
+      { name: "181.fm – The Office", stream: "https://181fm-edge1.cdnstream.com/181-office_128k.mp3" },
+      { name: "181.fm – Highway 181", stream: "https://181fm-edge1.cdnstream.com/181-highway_128k.mp3" },
+      { name: "181.fm – Real Country", stream: "https://181fm-edge1.cdnstream.com/181-realcountry_128k.mp3" },
+      { name: "181.fm – Kickin' Country", stream: "https://181fm-edge1.cdnstream.com/181-kickincountry_128k.mp3" },
+      { name: "181.fm – Soul", stream: "https://181fm-edge1.cdnstream.com/181-soul_128k.mp3" },
+      { name: "181.fm – True Blues", stream: "https://181fm-edge1.cdnstream.com/181-blues_128k.mp3" }
     ];
+
     let currentStation = 0;
+
     function atualizarRadio() {
       const player = document.getElementById("player");
       const name = document.getElementById("stationName");
@@ -174,14 +175,17 @@
       const pos = (currentStation / total) * 100;
       needle.style.left = 'calc(' + pos + '% - 2px)';
     }
+
     function sintonizarProxima() {
       currentStation = (currentStation + 1) % stations.length;
       atualizarRadio();
     }
+
     function sintonizarAnterior() {
       currentStation = (currentStation - 1 + stations.length) % stations.length;
       atualizarRadio();
     }
+
     window.onload = atualizarRadio;
   </script>
 </body>
