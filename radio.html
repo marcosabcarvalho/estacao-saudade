@@ -5,111 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Estação Saudade – Rádio Retrô</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fdf8f3;
-    }
-    header {
-      background: #8b6f47;
-      padding: 20px;
-      color: white;
-      text-align: center;
-    }
+    body { margin: 0; font-family: 'Georgia', serif; background: #fdf8f3; }
+    header { background: #8b6f47; padding: 20px; color: #fff; text-align: center; }
     .container { display: flex; }
-    .sidebar {
-      width: 220px;
-      background: #e8ddce;
-      padding: 20px;
-      height: 100vh;
-      box-sizing: border-box;
-    }
-    .sidebar h2 { margin-top: 0; font-size: 18px; }
+    .sidebar { width: 220px; background: #e8ddce; padding: 20px; height: 100vh; }
+    .sidebar h2 { margin: 0 0 10px; font-size: 18px; }
     .sidebar ul { list-style: none; padding: 0; }
-    .sidebar li { margin: 10px 0; }
-    .sidebar a { text-decoration: none; color: #5a4330; }
+    .sidebar li { margin: 8px 0; }
+    .sidebar a { color: #5a4330; text-decoration: none; }
     .content { flex: 1; padding: 20px; }
-    .style-select {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    .style-select { text-align: center; margin-bottom: 20px; }
     .style-select select {
-      padding: 8px 12px;
-      font-size: 16px;
-      border-radius: 4px;
-      border: 1px solid #aaa;
-      background: #fffaf0;
-      cursor: pointer;
+      padding: 8px 12px; font-size: 16px; border-radius: 4px;
+      border: 1px solid #aaa; background: #fffaf0;
     }
     .radio-wrapper {
-      background: #d6c9b7;
-      border: 8px solid #aa9d8b;
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 700px;
-      margin: 0 auto;
+      background: #d6c9b7; border: 8px solid #aa9d8b; border-radius: 15px;
+      padding: 30px; max-width: 700px; margin: 0 auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
     .station-label {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 15px 0;
-      color: #4a392c;
-      text-align: center;
+      text-align: center; font-size: 20px; font-weight: bold;
+      color: #4a392c; margin: 15px 0;
     }
     .scale {
-      position: relative;
-      height: 60px;
-      margin: 20px auto 10px;
-      background: #fff;
-      border: 2px solid #8c7c68;
-      border-radius: 8px;
+      position: relative; height: 60px; margin: 20px auto 10px;
+      background: #fff; border: 2px solid #8c7c68; border-radius: 8px;
     }
-    /* marcações do dial */
     .scale-marker {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 2px;
+      position: absolute; top: 0; height: 100%; width: 2px;
       background: #8c7c68;
     }
-    /* labels FM */
     .scale-labels {
-      position: absolute;
-      top: 64px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 10px;
-      color: #5a3e2b;
+      position: absolute; top: 64px; width: 100%; display: flex;
+      justify-content: space-between; font-size: 10px; color: #5a3e2b;
     }
     .needle {
-      position: absolute;
-      top: -10px;
-      height: 80px;
-      width: 4px;
-      background: red;
-      left: 0;
-      transition: left 0.3s ease;
+      position: absolute; top: -10px; height: 80px; width: 4px;
+      background: red; left: 0; transition: left 0.3s ease;
     }
     audio { width: 100%; margin-top: 20px; }
     button.nav {
-      margin: 15px 10px 0;
-      padding: 10px 20px;
-      background-color: #5e4b3c;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
+      margin: 15px 10px; padding: 10px 20px; background: #5e4b3c;
+      color: #fff; border: none; border-radius: 5px; cursor: pointer;
     }
-    button.nav:hover { background-color: #3e3027; }
+    button.nav:hover { background: #3e3027; }
     footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #e0d4c3;
-      font-size: 14px;
-      margin-top: 20px;
+      text-align: center; padding: 15px; background: #e0d4c3;
+      font-size: 14px; margin-top: 20px;
     }
   </style>
 </head>
@@ -131,45 +74,25 @@
     </aside>
     <main class="content">
       <div class="style-select">
-        <select id="styleSelect" onchange="loadStations(this.value)">
-          <option value="">Selecione um estilo…</option>
-          <option>Classic Hits</option>
-          <option>Old School</option>
-          <option>Disco</option>
-          <option>Hairband</option>
-          <option>Lite 90s</option>
-          <option>Classic Rock</option>
-          <option>Awesome 80s</option>
-          <option>Mellow Gold</option>
-          <option>Good Time Oldies</option>
-          <option>Office</option>
-          <option>Highway</option>
-          <option>Real Country</option>
-          <option>Kickin Country</option>
-          <option>Soul</option>
-          <option>True Blues</option>
+        <select id="styleSelect">
+          <option value="">Carregando estilos…</option>
         </select>
       </div>
-
       <div class="radio-wrapper">
-        <div class="station-label" id="stationName">Escolha um estilo</div>
-
+        <div class="station-label" id="stationName">Escolha um estilo acima</div>
         <div class="scale" id="scale">
-          <!-- ponteiro -->
           <div class="needle" id="needle"></div>
-          <!-- marcações estáticas em 0%,20%,40%,60%,80%,100% -->
+          <!-- Marcadores em 0%,20%,40%,60%,80%,100% -->
           <div class="scale-marker" style="left:0%"></div>
           <div class="scale-marker" style="left:20%"></div>
           <div class="scale-marker" style="left:40%"></div>
           <div class="scale-marker" style="left:60%"></div>
           <div class="scale-marker" style="left:80%"></div>
           <div class="scale-marker" style="left:100%"></div>
-          <!-- labels FM -->
           <div class="scale-labels">
-            <span>88</span><span>92</span><span>96</span><span>100</span><span>104</span><span>108</span>
+            <span>1/</span><span>2/</span><span>3/</span><span>4/</span><span>5/</span>
           </div>
         </div>
-
         <div style="text-align:center">
           <button class="nav" onclick="sintonizarAnterior()">◀</button>
           <button class="nav" onclick="sintonizarProxima()">▶</button>
@@ -178,76 +101,60 @@
       </div>
     </main>
   </div>
-
   <footer>
     <p>&copy; 2025 Estação Saudade. Todos os direitos reservados.</p>
   </footer>
 
   <script>
-    const stationGroups = {
-      "Classic Hits": [
-        {name:"181.fm – Classic Hits",stream:"https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3"}
-      ],
-      "Old School": [
-        {name:"181.fm – Old School",stream:"https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3"}
-      ],
-      "Disco": [
-        {name:"181.fm – The Beat (Disco)",stream:"https://181fm-edge1.cdnstream.com/181-beat_128k.mp3"}
-      ],
-      "Hairband": [
-        {name:"181.fm – 80s Hairband",stream:"https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3"}
-      ],
-      "Lite 90s": [
-        {name:"181.fm – Lite 90s",stream:"https://181fm-edge1.cdnstream.com/181-lite_128k.mp3"}
-      ],
-      "Classic Rock": [
-        {name:"181.fm – The Eagle (Classic Rock)",stream:"https://181fm-edge1.cdnstream.com/181-eagle_128k.mp3"}
-      ],
-      "Awesome 80s": [
-        {name:"181.fm – Awesome 80s",stream:"https://181fm-edge1.cdnstream.com/181-awesome80s_128k.mp3"}
-      ],
-      "Mellow Gold": [
-        {name:"181.fm – Mellow Gold",stream:"https://181fm-edge1.cdnstream.com/181-mellow_128k.mp3"}
-      ],
-      "Good Time Oldies": [
-        {name:"181.fm – Good Time Oldies",stream:"https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3"}
-      ],
-      "Office": [
-        {name:"181.fm – The Office",stream:"https://181fm-edge1.cdnstream.com/181-office_128k.mp3"}
-      ],
-      "Highway": [
-        {name:"181.fm – Highway 181",stream:"https://181fm-edge1.cdnstream.com/181-highway_128k.mp3"}
-      ],
-      "Real Country": [
-        {name:"181.fm – Real Country",stream:"https://181fm-edge1.cdnstream.com/181-realcountry_128k.mp3"}
-      ],
-      "Kickin Country": [
-        {name:"181.fm – Kickin' Country",stream:"https://181fm-edge1.cdnstream.com/181-kickincountry_128k.mp3"}
-      ],
-      "Soul": [
-        {name:"181.fm – Soul",stream:"https://181fm-edge1.cdnstream.com/181-soul_128k.mp3"}
-      ],
-      "True Blues": [
-        {name:"181.fm – True Blues",stream:"https://181fm-edge1.cdnstream.com/181-blues_128k.mp3"}
-      ]
-    };
+    let stationGroups = {}, stations = [], currentStation = 0;
 
-    let stations = [], currentStation = 0;
+    // Carrega JSON de estações
+    fetch('stations.json')
+      .then(res => res.json())
+      .then(json => {
+        stationGroups = json;
+        init();
+      })
+      .catch(err => console.error('Erro ao carregar stations.json:', err));
 
-    function loadStations(style) {
+    function init() {
+      const sel = document.getElementById('styleSelect');
+      sel.innerHTML = '<option value="">Selecione um estilo…</option>';
+      Object.keys(stationGroups).forEach(style => {
+        const o = document.createElement('option');
+        o.value = style;
+        o.textContent = style;
+        sel.appendChild(o);
+      });
+      // Restaurar última preferência
+      const prefs = JSON.parse(localStorage.getItem('estacaoPrefs') || '{}');
+      if (prefs.style && stationGroups[prefs.style]) {
+        sel.value = prefs.style;
+        loadStations(prefs.style, prefs.index || 0);
+      }
+      sel.addEventListener('change', () => loadStations(sel.value, 0));
+    }
+
+    function loadStations(style, index = 0) {
       stations = stationGroups[style] || [];
-      currentStation = 0;
+      currentStation = index;
       atualizarRadio();
-      document.getElementById('stationName').textContent = style;
+      localStorage.setItem('estacaoPrefs', JSON.stringify({ style, index: currentStation }));
     }
 
     function atualizarRadio() {
       if (!stations.length) return;
-      const {name, stream} = stations[currentStation];
+      const { name, stream } = stations[currentStation];
       document.getElementById('player').src = stream;
       document.getElementById('stationName').textContent = name;
-      const pos = (currentStation / (stations.length - 1)) * 100;
+      const pos = stations.length > 1
+        ? (currentStation / (stations.length - 1)) * 100
+        : 0;
       document.getElementById('needle').style.left = `calc(${pos}% - 2px)`;
+      localStorage.setItem('estacaoPrefs', JSON.stringify({
+        style: document.getElementById('styleSelect').value,
+        index: currentStation
+      }));
     }
 
     function sintonizarProxima() {
