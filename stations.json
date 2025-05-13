@@ -1,168 +1,372 @@
 {
-  "80s": [
+  "Oldies": [
     {
-      "name": "181.fm \u2013 Awesome 80s",
-      "stream": "https://181fm-edge1.cdnstream.com/181-awesome80s_128k.mp3"
+      "name": "Classic Hits 181",
+      "stream": "https://listen.181fm.com/181-greatoldies_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 80s Hairband",
-      "stream": "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3"
+      "name": "Good Time Oldies",
+      "stream": "https://listen.181fm.com/181-goodtime_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Lite 80s",
-      "stream": "https://181fm-edge1.cdnstream.com/181-lite80s_128k.mp3"
+      "name": "Mellow Gold",
+      "stream": "https://listen.181fm.com/181-mellow_128k.mp3"
+    },
+    {
+      "name": "Soul",
+      "stream": "https://listen.181fm.com/181-soul_128k.mp3"
+    },
+    {
+      "name": "Beatles",
+      "stream": "https://listen.181fm.com/181-beatles_128k.mp3"
+    },
+    {
+      "name": "Super 70s",
+      "stream": "https://listen.181fm.com/181-70s_128k.mp3"
     }
   ],
-  "90s": [
+  "80's Decade": [
     {
-      "name": "181.fm \u2013 Lite 90s",
-      "stream": "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3"
+      "name": "Awesome 80's",
+      "stream": "https://listen.181fm.com/181-awesome80s_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Star 90s",
-      "stream": "https://181fm-edge1.cdnstream.com/181-star90s_128k.mp3"
+      "name": "Lite 80's",
+      "stream": "https://listen.181fm.com/181-lite80s_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 90s Dance",
-      "stream": "https://181fm-edge1.cdnstream.com/181-90sdance_128k.mp3"
+      "name": "80's Country",
+      "stream": "https://listen.181fm.com/181-80scountry_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 90s Country",
-      "stream": "https://181fm-edge1.cdnstream.com/181-90scountry_128k.mp3"
+      "name": "80's Lite RnB",
+      "stream": "https://listen.181fm.com/181-80sliternb_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 90s Alternative",
-      "stream": "https://181fm-edge1.cdnstream.com/181-90salt_128k.mp3"
+      "name": "80's RnB",
+      "stream": "https://listen.181fm.com/181-80srnb_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 90s RnB",
-      "stream": "https://181fm-edge1.cdnstream.com/181-90srnb_128k.mp3"
+      "name": "80's Hairband",
+      "stream": "https://listen.181fm.com/181-hairband_128k.mp3"
+    }
+  ],
+  "90's Decade": [
+    {
+      "name": "Lite 90's",
+      "stream": "https://listen.181fm.com/181-lite90s_128k.mp3"
+    },
+    {
+      "name": "90's Lite RnB",
+      "stream": "https://listen.181fm.com/181-90sliternb_128k.mp3"
+    },
+    {
+      "name": "90's Alternative",
+      "stream": "https://listen.181fm.com/181-90salt_128k.mp3"
+    },
+    {
+      "name": "90's RnB",
+      "stream": "https://listen.181fm.com/181-90srnb_128k.mp3"
+    },
+    {
+      "name": "Star 90's",
+      "stream": "https://listen.181fm.com/181-star90s_128k.mp3"
+    },
+    {
+      "name": "90's Country",
+      "stream": "https://listen.181fm.com/181-90scountry_128k.mp3"
+    },
+    {
+      "name": "90's Dance",
+      "stream": "https://listen.181fm.com/181-90sdance_128k.mp3"
+    }
+  ],
+  "Pop": [
+    {
+      "name": "Power 181 (Top 40)",
+      "stream": "https://listen.181fm.com/181-power_128k.mp3"
+    },
+    {
+      "name": "Power 181 [E]",
+      "stream": "https://listen.181fm.com/181-powerexplicit_128k.mp3"
+    },
+    {
+      "name": "The Office",
+      "stream": "https://listen.181fm.com/181-office_128k.mp3"
+    },
+    {
+      "name": "The Mix",
+      "stream": "https://listen.181fm.com/181-themix_128k.mp3"
+    },
+    {
+      "name": "The Point",
+      "stream": "https://listen.181fm.com/181-thepoint_128k.mp3"
+    },
+    {
+      "name": "Old School HipHop/RnB",
+      "stream": "https://listen.181fm.com/181-oldschool_128k.mp3"
+    },
+    {
+      "name": "Smooth AC",
+      "stream": "https://listen.181fm.com/181-smoothac_128k.mp3"
+    },
+    {
+      "name": "UK top 40",
+      "stream": "https://listen.181fm.com/181-uktop40_128k.mp3"
+    },
+    {
+      "name": "The Heart (Love Songs)",
+      "stream": "https://listen.181fm.com/181-heart_128k.mp3"
+    },
+    {
+      "name": "The Vibe of Vegas",
+      "stream": "https://listen.181fm.com/181-vibe_128k.mp3"
     }
   ],
   "Rock": [
     {
-      "name": "181.fm \u2013 The Eagle (Classic Rock)",
-      "stream": "https://181fm-edge1.cdnstream.com/181-eagle_128k.mp3"
+      "name": "The Buzz (Alt. Rock)",
+      "stream": "https://listen.181fm.com/181-buzz_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Rock 181",
-      "stream": "https://181fm-edge1.cdnstream.com/181-rock_128k.mp3"
+      "name": "Classic Buzz (Alt)",
+      "stream": "https://listen.181fm.com/181-classicbuzz_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Rock!",
-      "stream": "https://181fm-edge1.cdnstream.com/181-rockhard_128k.mp3"
+      "name": "The Eagle (Classic)",
+      "stream": "https://listen.181fm.com/181-eagle_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Classic Buzz",
-      "stream": "https://181fm-edge1.cdnstream.com/181-buzz_128k.mp3"
+      "name": "Rock 181",
+      "stream": "https://listen.181fm.com/181-rock_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Buzz (Alt Rock)",
-      "stream": "https://181fm-edge1.cdnstream.com/181-alt_128k.mp3"
+      "name": "Rock 40 (Rock & Roll)",
+      "stream": "https://listen.181fm.com/181-rock40_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Yacht Rock",
-      "stream": "https://181fm-edge1.cdnstream.com/181-yacht_128k.mp3"
+      "name": "80's Hairband",
+      "stream": "https://listen.181fm.com/181-hairband_128k.mp3"
+    },
+    {
+      "name": "Yacht Rock",
+      "stream": "https://listen.181fm.com/181-yachtrock_128k.mp3"
+    },
+    {
+      "name": "Chloe @181.FM",
+      "stream": "https://listen.181fm.com/181-chloe_128k.mp3"
+    },
+    {
+      "name": "The Rock! (Hard Rock)",
+      "stream": "https://listen.181fm.com/181-hardrock_128k.mp3"
     }
   ],
   "Country": [
     {
-      "name": "181.fm \u2013 Real Country",
-      "stream": "https://181fm-edge1.cdnstream.com/181-realcountry_128k.mp3"
+      "name": "Kickin' Country",
+      "stream": "https://listen.181fm.com/181-kickincountry_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Kickin' Country",
-      "stream": "https://181fm-edge1.cdnstream.com/181-kickincountry_128k.mp3"
+      "name": "Real Country",
+      "stream": "https://listen.181fm.com/181-realcountry_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Highway 181",
-      "stream": "https://181fm-edge1.cdnstream.com/181-highway_128k.mp3"
+      "name": "Highway 181",
+      "stream": "https://listen.181fm.com/181-highway_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 80s Country",
-      "stream": "https://181fm-edge1.cdnstream.com/181-80scountry_128k.mp3"
+      "name": "80's Country",
+      "stream": "https://listen.181fm.com/181-80scountry_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Front Porch Bluegrass",
-      "stream": "https://181fm-edge1.cdnstream.com/181-frontporch_128k.mp3"
+      "name": "90's Country",
+      "stream": "https://listen.181fm.com/181-90scountry_128k.mp3"
+    },
+    {
+      "name": "Front Porch (Bluegrass)",
+      "stream": "https://listen.181fm.com/181-frontporch_128k.mp3"
     }
   ],
-  "R&B / Soul": [
+  "Urban": [
     {
-      "name": "181.fm \u2013 Old School",
-      "stream": "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3"
+      "name": "The Beat (HipHop/R&B)",
+      "stream": "https://listen.181fm.com/181-beat_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Soul",
-      "stream": "https://181fm-edge1.cdnstream.com/181-soul_128k.mp3"
+      "name": "Classic R&B",
+      "stream": "https://listen.181fm.com/181-classicrnb_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 True RnB",
-      "stream": "https://181fm-edge1.cdnstream.com/181-truernb_128k.mp3"
+      "name": "The Box (Urban)",
+      "stream": "https://listen.181fm.com/181-thebox_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Jammin",
-      "stream": "https://181fm-edge1.cdnstream.com/181-jammin_128k.mp3"
+      "name": "True R&B",
+      "stream": "https://listen.181fm.com/181-rnb_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Beat",
-      "stream": "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3"
+      "name": "Soul",
+      "stream": "https://listen.181fm.com/181-soul_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Box",
-      "stream": "https://181fm-edge1.cdnstream.com/181-box_128k.mp3"
+      "name": "Party 181",
+      "stream": "https://listen.181fm.com/181-party_128k.mp3"
+    },
+    {
+      "name": "Jammin 181",
+      "stream": "https://listen.181fm.com/181-jammin_128k.mp3"
     }
   ],
-  "Pop / Top 40": [
+  "Dance": [
     {
-      "name": "181.fm \u2013 Power 181",
-      "stream": "https://181fm-edge1.cdnstream.com/181-power_128k.mp3"
+      "name": "Energy 98",
+      "stream": "https://listen.181fm.com/181-energy98_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 UK Top 40",
-      "stream": "https://181fm-edge1.cdnstream.com/181-ukt40_128k.mp3"
+      "name": "Classic Energy",
+      "stream": "https://listen.181fm.com/181-classicenergy_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Mix",
-      "stream": "https://181fm-edge1.cdnstream.com/181-themix_128k.mp3"
+      "name": "Chilled Out",
+      "stream": "https://listen.181fm.com/181-chilled_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Energy 93",
-      "stream": "https://181fm-edge1.cdnstream.com/181-energy93_128k.mp3"
+      "name": "Energy 93",
+      "stream": "https://listen.181fm.com/181-energy93_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Party 181",
-      "stream": "https://181fm-edge1.cdnstream.com/181-party_128k.mp3"
+      "name": "Studio 181",
+      "stream": "https://listen.181fm.com/181-ball_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Point",
-      "stream": "https://181fm-edge1.cdnstream.com/181-point_128k.mp3"
+      "name": "Techno Club",
+      "stream": "https://listen.181fm.com/181-techno_128k.mp3"
     }
   ],
-  "Other": [
+  "Easy Listening": [
     {
-      "name": "181.fm \u2013 Mellow Gold",
-      "stream": "https://181fm-edge1.cdnstream.com/181-mellow_128k.mp3"
+      "name": "True Blues",
+      "stream": "https://listen.181fm.com/181-blues_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Office",
-      "stream": "https://181fm-edge1.cdnstream.com/181-office_128k.mp3"
+      "name": "Jazz Mix",
+      "stream": "https://listen.181fm.com/181-jazzmix_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Good Time Oldies",
-      "stream": "https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3"
+      "name": "The Breeze",
+      "stream": "https://listen.181fm.com/181-breeze_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 Beatles",
-      "stream": "https://181fm-edge1.cdnstream.com/181-beatles_128k.mp3"
+      "name": "Classical Guitar",
+      "stream": "https://listen.181fm.com/181-classicalguitar_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 True Blues",
-      "stream": "https://181fm-edge1.cdnstream.com/181-blues_128k.mp3"
+      "name": "Classical Jazz",
+      "stream": "https://listen.181fm.com/181-classicaljazz_128k.mp3"
     },
     {
-      "name": "181.fm \u2013 The Heart (Love Songs)",
-      "stream": "https://181fm-edge1.cdnstream.com/181-heart_128k.mp3"
+      "name": "Vocal Jazz",
+      "stream": "https://listen.181fm.com/181-vocals_128k.mp3"
+    },
+    {
+      "name": "BeBop Jazz",
+      "stream": "https://listen.181fm.com/181-bebop_128k.mp3"
+    },
+    {
+      "name": "Fusion Jazz",
+      "stream": "https://listen.181fm.com/181-fusionjazz_128k.mp3"
+    },
+    {
+      "name": "Trance Jazz",
+      "stream": "https://listen.181fm.com/181-trancejazz_128k.mp3"
+    },
+    {
+      "name": "Classical Music",
+      "stream": "https://listen.181fm.com/181-classical_128k.mp3"
+    },
+    {
+      "name": "Acid Jazz",
+      "stream": "https://listen.181fm.com/181-acidjazz_128k.mp3"
+    }
+  ],
+  "Comedy": [
+    {
+      "name": "Comedy",
+      "stream": "https://listen.181fm.com/181-comedy_128k.mp3"
+    }
+  ],
+  "Christmas": [
+    {
+      "name": "Christmas Kountry",
+      "stream": "https://listen.181fm.com/181-xkkountry_128k.mp3"
+    },
+    {
+      "name": "Christmas Classics",
+      "stream": "https://listen.181fm.com/181-xtraditional_128k.mp3"
+    },
+    {
+      "name": "Christmas Oldies",
+      "stream": "https://listen.181fm.com/181-xoldies_128k.mp3"
+    },
+    {
+      "name": "Christmas Country",
+      "stream": "https://listen.181fm.com/181-xcountry_128k.mp3"
+    },
+    {
+      "name": "Christmas Power",
+      "stream": "https://listen.181fm.com/181-xpower_128k.mp3"
+    },
+    {
+      "name": "Christmas Highway",
+      "stream": "https://listen.181fm.com/181-xhighway_128k.mp3"
+    },
+    {
+      "name": "Christmas Soundtracks",
+      "stream": "https://listen.181fm.com/181-xsoundtrax_128k.mp3"
+    },
+    {
+      "name": "Christmas R&B",
+      "stream": "https://listen.181fm.com/181-xtrue_128k.mp3"
+    },
+    {
+      "name": "Christmas Rock",
+      "stream": "https://listen.181fm.com/181-xrock_128k.mp3"
+    },
+    {
+      "name": "Christmas Mix",
+      "stream": "https://listen.181fm.com/181-xmix_128k.mp3"
+    },
+    {
+      "name": "Christmas Fun",
+      "stream": "https://listen.181fm.com/181-xfun_128k.mp3"
+    },
+    {
+      "name": "Christmas Kids",
+      "stream": "https://listen.181fm.com/181-xkids_128k.mp3"
+    },
+    {
+      "name": "Christmas Blender",
+      "stream": "https://listen.181fm.com/181-xblender_128k.mp3"
+    },
+    {
+      "name": "Christmas Standards",
+      "stream": "https://listen.181fm.com/181-xstandards_128k.mp3"
+    },
+    {
+      "name": "Christmas Spirit",
+      "stream": "https://listen.181fm.com/181-xspirit_128k.mp3"
+    },
+    {
+      "name": "Christmas Smooth Jazz",
+      "stream": "https://listen.181fm.com/181-xsmooth_128k.mp3"
+    },
+    {
+      "name": "Christmas Gospel",
+      "stream": "https://listen.181fm.com/181-xgospel_128k.mp3"
+    },
+    {
+      "name": "Christmas Swing",
+      "stream": "https://listen.181fm.com/181-xswing_128k.mp3"
     }
   ]
 }
