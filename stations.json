@@ -1,0 +1,38 @@
+{
+  "80s": [
+    { "name": "181.fm – Awesome 80s",   "stream": "https://181fm-edge1.cdnstream.com/181-awesome80s_128k.mp3" },
+    { "name": "181.fm – 80s Hairband",   "stream": "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3" },
+    { "name": "1.FM – Disco Ball 70s&80s","stream": "https://strm112.1.fm/discoball_mobile_mp3" },
+    { "name": "181.fm – Mellow Gold",    "stream": "https://181fm-edge1.cdnstream.com/181-mellow_128k.mp3" },
+    { "name": "181.fm – Good Time Oldies","stream": "https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3" }
+  ],
+  "90s": [
+    { "name": "181.fm – Lite 90s",          "stream": "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3" },
+    { "name": "181.fm – Energy 93 (90s Pop)","stream": "https://181fm-edge1.cdnstream.com/181-energy93_128k.mp3" }
+  ],
+  "Classic Hits": [
+    { "name": "181.fm – Classic Hits",   "stream": "https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3" },
+    { "name": "181.fm – Old School",     "stream": "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" },
+    { "name": "181.fm – Good Time Oldies","stream": "https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3" }
+  ],
+  "Rock": [
+    { "name": "181.fm – The Eagle",      "stream": "https://181fm-edge1.cdnstream.com/181-eagle_128k.mp3" },
+    { "name": "181.fm – Highway 181",    "stream": "https://181fm-edge1.cdnstream.com/181-highway_128k.mp3" },
+    { "name": "181.fm – Old School Rock","stream": "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3" }
+  ],
+  "Country": [
+    { "name": "181.fm – Real Country",   "stream": "https://181fm-edge1.cdnstream.com/181-realcountry_128k.mp3" },
+    { "name": "181.fm – Kickin' Country","stream": "https://181fm-edge1.cdnstream.com/181-kickincountry_128k.mp3" }
+  ],
+  "Disco": [
+    { "name": "181.fm – The Beat",      "stream": "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3" },
+    { "name": "1.FM – Disco Ball",      "stream": "https://strm112.1.fm/discoball_mobile_mp3" }
+  ],
+  "Soul/Blues": [
+    { "name": "181.fm – Soul",          "stream": "https://181fm-edge1.cdnstream.com/181-soul_128k.mp3" },
+    { "name": "181.fm – True Blues",    "stream": "https://181fm-edge1.cdnstream.com/181-blues_128k.mp3" }
+  ],
+  "Office": [
+    { "name": "181.fm – The Office",    "stream": "https://181fm-edge1.cdnstream.com/181-office_128k.mp3" }
+  ]
+}
