@@ -16,9 +16,7 @@
       color: white;
       text-align: center;
     }
-    .container {
-      display: flex;
-    }
+    .container { display: flex; }
     .sidebar {
       width: 220px;
       background: #e8ddce;
@@ -26,40 +24,22 @@
       height: 100vh;
       box-sizing: border-box;
     }
-    .sidebar h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-    .sidebar li {
-      margin: 10px 0;
-    }
-    .sidebar a {
-      text-decoration: none;
-      color: #5a4330;
-    }
-    .content {
-      flex: 1;
-      padding: 20px;
-    }
-    .style-buttons {
+    .sidebar h2 { margin-top: 0; font-size: 18px; }
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar li { margin: 10px 0; }
+    .sidebar a { text-decoration: none; color: #5a4330; }
+    .content { flex: 1; padding: 20px; }
+    .style-select {
       text-align: center;
       margin-bottom: 20px;
     }
-    .style-buttons button {
-      margin: 5px;
+    .style-select select {
       padding: 8px 12px;
-      background: #5e4b3c;
-      color: white;
-      border: none;
+      font-size: 16px;
       border-radius: 4px;
+      border: 1px solid #aaa;
+      background: #fffaf0;
       cursor: pointer;
-    }
-    .style-buttons button:hover {
-      background: #3e3027;
     }
     .radio-wrapper {
       background: #d6c9b7;
@@ -70,6 +50,13 @@
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
+    .station-label {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #4a392c;
+      text-align: center;
+    }
     .scale {
       position: relative;
       height: 60px;
@@ -77,6 +64,24 @@
       background: #fff;
       border: 2px solid #8c7c68;
       border-radius: 8px;
+    }
+    /* marcações do dial */
+    .scale-marker {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: #8c7c68;
+    }
+    /* labels FM */
+    .scale-labels {
+      position: absolute;
+      top: 64px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #5a3e2b;
     }
     .needle {
       position: absolute;
@@ -87,25 +92,9 @@
       left: 0;
       transition: left 0.3s ease;
     }
-    .station-label {
-      font-size: 20px;
-      font-weight: bold;
-      margin: 15px 0;
-      color: #4a392c;
-      text-align: center;
-    }
-    .stations {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 5px;
-      font-size: 12px;
-    }
-    audio {
-      width: 100%;
-      margin-top: 20px;
-    }
+    audio { width: 100%; margin-top: 20px; }
     button.nav {
-      margin-top: 15px;
+      margin: 15px 10px 0;
       padding: 10px 20px;
       background-color: #5e4b3c;
       color: white;
@@ -114,9 +103,7 @@
       font-size: 16px;
       cursor: pointer;
     }
-    button.nav:hover {
-      background-color: #3e3027;
-    }
+    button.nav:hover { background-color: #3e3027; }
     footer {
       text-align: center;
       padding: 15px;
@@ -143,37 +130,51 @@
       </ul>
     </aside>
     <main class="content">
-      <div class="style-buttons">
-        <!-- Botões de estilos -->
-        <button onclick="loadStations('Classic Hits')">Classic Hits</button>
-        <button onclick="loadStations('Old School')">Old School</button>
-        <button onclick="loadStations('Disco')">Disco</button>
-        <button onclick="loadStations('Hairband')">80s Hairband</button>
-        <button onclick="loadStations('Lite 90s')">Lite 90s</button>
-        <button onclick="loadStations('Classic Rock')">Classic Rock</button>
-        <button onclick="loadStations('Awesome 80s')">Awesome 80s</button>
-        <button onclick="loadStations('Mellow Gold')">Mellow Gold</button>
-        <button onclick="loadStations('Good Time Oldies')">Good Time Oldies</button>
-        <button onclick="loadStations('Office')">The Office</button>
-        <button onclick="loadStations('Highway')">Highway 181</button>
-        <button onclick="loadStations('Real Country')">Real Country</button>
-        <button onclick="loadStations('Kickin Country')">Kickin' Country</button>
-        <button onclick="loadStations('Soul')">Soul</button>
-        <button onclick="loadStations('True Blues')">True Blues</button>
+      <div class="style-select">
+        <select id="styleSelect" onchange="loadStations(this.value)">
+          <option value="">Selecione um estilo…</option>
+          <option>Classic Hits</option>
+          <option>Old School</option>
+          <option>Disco</option>
+          <option>Hairband</option>
+          <option>Lite 90s</option>
+          <option>Classic Rock</option>
+          <option>Awesome 80s</option>
+          <option>Mellow Gold</option>
+          <option>Good Time Oldies</option>
+          <option>Office</option>
+          <option>Highway</option>
+          <option>Real Country</option>
+          <option>Kickin Country</option>
+          <option>Soul</option>
+          <option>True Blues</option>
+        </select>
       </div>
 
       <div class="radio-wrapper">
-        <div class="station-label" id="stationName">Selecione um estilo acima</div>
+        <div class="station-label" id="stationName">Escolha um estilo</div>
+
         <div class="scale" id="scale">
+          <!-- ponteiro -->
           <div class="needle" id="needle"></div>
-          <div class="stations">
-            <!-- Marcadores visuais fixos, o ponteiro indica a posição -->
-            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+          <!-- marcações estáticas em 0%,20%,40%,60%,80%,100% -->
+          <div class="scale-marker" style="left:0%"></div>
+          <div class="scale-marker" style="left:20%"></div>
+          <div class="scale-marker" style="left:40%"></div>
+          <div class="scale-marker" style="left:60%"></div>
+          <div class="scale-marker" style="left:80%"></div>
+          <div class="scale-marker" style="left:100%"></div>
+          <!-- labels FM -->
+          <div class="scale-labels">
+            <span>88</span><span>92</span><span>96</span><span>100</span><span>104</span><span>108</span>
           </div>
         </div>
-        <button class="nav" onclick="sintonizarAnterior()">◀</button>
-        <button class="nav" onclick="sintonizarProxima()">▶</button>
-        <audio id="player" controls autoplay></audio>
+
+        <div style="text-align:center">
+          <button class="nav" onclick="sintonizarAnterior()">◀</button>
+          <button class="nav" onclick="sintonizarProxima()">▶</button>
+        </div>
+        <audio id="player" controls></audio>
       </div>
     </main>
   </div>
@@ -185,49 +186,49 @@
   <script>
     const stationGroups = {
       "Classic Hits": [
-        {name: "181.fm – Classic Hits", stream: "https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3"}
+        {name:"181.fm – Classic Hits",stream:"https://181fm-edge1.cdnstream.com/181-classichits_128k.mp3"}
       ],
       "Old School": [
-        {name: "181.fm – Old School", stream: "https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3"}
+        {name:"181.fm – Old School",stream:"https://181fm-edge1.cdnstream.com/181-oldschool_128k.mp3"}
       ],
       "Disco": [
-        {name: "181.fm – The Beat (Disco)", stream: "https://181fm-edge1.cdnstream.com/181-beat_128k.mp3"}
+        {name:"181.fm – The Beat (Disco)",stream:"https://181fm-edge1.cdnstream.com/181-beat_128k.mp3"}
       ],
       "Hairband": [
-        {name: "181.fm – 80s Hairband", stream: "https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3"}
+        {name:"181.fm – 80s Hairband",stream:"https://181fm-edge1.cdnstream.com/181-hairband_128k.mp3"}
       ],
       "Lite 90s": [
-        {name: "181.fm – Lite 90s", stream: "https://181fm-edge1.cdnstream.com/181-lite_128k.mp3"}
+        {name:"181.fm – Lite 90s",stream:"https://181fm-edge1.cdnstream.com/181-lite_128k.mp3"}
       ],
       "Classic Rock": [
-        {name: "181.fm – The Eagle (Classic Rock)", stream: "https://181fm-edge1.cdnstream.com/181-eagle_128k.mp3"}
+        {name:"181.fm – The Eagle (Classic Rock)",stream:"https://181fm-edge1.cdnstream.com/181-eagle_128k.mp3"}
       ],
       "Awesome 80s": [
-        {name: "181.fm – Awesome 80s", stream: "https://181fm-edge1.cdnstream.com/181-awesome80s_128k.mp3"}
+        {name:"181.fm – Awesome 80s",stream:"https://181fm-edge1.cdnstream.com/181-awesome80s_128k.mp3"}
       ],
       "Mellow Gold": [
-        {name: "181.fm – Mellow Gold", stream: "https://181fm-edge1.cdnstream.com/181-mellow_128k.mp3"}
+        {name:"181.fm – Mellow Gold",stream:"https://181fm-edge1.cdnstream.com/181-mellow_128k.mp3"}
       ],
       "Good Time Oldies": [
-        {name: "181.fm – Good Time Oldies", stream: "https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3"}
+        {name:"181.fm – Good Time Oldies",stream:"https://181fm-edge1.cdnstream.com/181-goodtime_128k.mp3"}
       ],
       "Office": [
-        {name: "181.fm – The Office", stream: "https://181fm-edge1.cdnstream.com/181-office_128k.mp3"}
+        {name:"181.fm – The Office",stream:"https://181fm-edge1.cdnstream.com/181-office_128k.mp3"}
       ],
       "Highway": [
-        {name: "181.fm – Highway 181", stream: "https://181fm-edge1.cdnstream.com/181-highway_128k.mp3"}
+        {name:"181.fm – Highway 181",stream:"https://181fm-edge1.cdnstream.com/181-highway_128k.mp3"}
       ],
       "Real Country": [
-        {name: "181.fm – Real Country", stream: "https://181fm-edge1.cdnstream.com/181-realcountry_128k.mp3"}
+        {name:"181.fm – Real Country",stream:"https://181fm-edge1.cdnstream.com/181-realcountry_128k.mp3"}
       ],
       "Kickin Country": [
-        {name: "181.fm – Kickin' Country", stream: "https://181fm-edge1.cdnstream.com/181-kickincountry_128k.mp3"}
+        {name:"181.fm – Kickin' Country",stream:"https://181fm-edge1.cdnstream.com/181-kickincountry_128k.mp3"}
       ],
       "Soul": [
-        {name: "181.fm – Soul", stream: "https://181fm-edge1.cdnstream.com/181-soul_128k.mp3"}
+        {name:"181.fm – Soul",stream:"https://181fm-edge1.cdnstream.com/181-soul_128k.mp3"}
       ],
       "True Blues": [
-        {name: "181.fm – True Blues", stream: "https://181fm-edge1.cdnstream.com/181-blues_128k.mp3"}
+        {name:"181.fm – True Blues",stream:"https://181fm-edge1.cdnstream.com/181-blues_128k.mp3"}
       ]
     };
 
@@ -242,15 +243,11 @@
 
     function atualizarRadio() {
       if (!stations.length) return;
-      const player = document.getElementById("player");
-      const name = document.getElementById("stationName");
-      const needle = document.getElementById("needle");
-      const station = stations[currentStation];
-      player.src = station.stream;
-      name.textContent = station.name;
-      const total = stations.length - 1;
-      const pos = (currentStation / total) * 100;
-      needle.style.left = `calc(${pos}% - 2px)`;
+      const {name, stream} = stations[currentStation];
+      document.getElementById('player').src = stream;
+      document.getElementById('stationName').textContent = name;
+      const pos = (currentStation / (stations.length - 1)) * 100;
+      document.getElementById('needle').style.left = `calc(${pos}% - 2px)`;
     }
 
     function sintonizarProxima() {
