@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 # 📻 Estação Saudade – Aplicativo Android com TWA (Trusted Web Activity)
 
 Este projeto empacota a versão PWA do site [Estação Saudade](https://marcosabcarvalho.github.io/estacao-saudade/radio.html) como um aplicativo Android nativo utilizando **Trusted Web Activity (TWA)**.
@@ -64,6 +55,7 @@ app/src/main/java/com/github/estacaosaudade/LauncherActivity.kt
 Conteúdo:
 
 ```kotlin
+
 package com.github.estacaosaudade
 
 import android.net.Uri
@@ -199,3 +191,70 @@ https://marcosabcarvalho.github.io/.well-known/assetlinks.json
 
 Desenvolvido com carinho nostálgico por [Marcos A. B. de Carvalho](https://github.com/marcosabcarvalho)  
 Empacotado com ❤️ pela Amora (ChatGPT)
+---
+
+## 🌐 Configuração de Domínio Personalizado (DNS + HTTPS)
+
+Para usar um domínio como `https://ideiasbits.com.br` com o GitHub Pages e TWA:
+
+### 🔧 1. Configure os registros DNS (zona do domínio)
+
+No painel de DNS do seu provedor (ex: Registro.br), adicione os seguintes **registros A**:
+
+| Tipo | Nome | Valor IP              |
+|------|------|------------------------|
+| A    | @    | 185.199.108.153        |
+| A    | @    | 185.199.109.153        |
+| A    | @    | 185.199.110.153        |
+| A    | @    | 185.199.111.153        |
+
+Se quiser usar também o `www.ideiasbits.com.br`, adicione:
+
+| Tipo  | Nome | Valor                            |
+|-------|------|----------------------------------|
+| CNAME | www  | marcosabcarvalho.github.io       |
+
+---
+
+### ⚙️ 2. Configure o GitHub Pages
+
+1. Vá até o repositório `marcosabcarvalho.github.io`
+2. Acesse **Settings > Pages**
+3. Em "Custom domain", insira `ideiasbits.com.br`
+4. Clique em **Save**
+5. O GitHub criará o arquivo `CNAME` automaticamente
+6. Após a propagação, ative a opção: ✅ "Enforce HTTPS"
+
+---
+
+### 🔒 3. Criar e publicar `assetlinks.json`
+
+No seu repositório GitHub Pages, crie a pasta:
+
+```
+.well-known/
+```
+
+E dentro dela o arquivo `assetlinks.json` com:
+
+```json
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.github.estacaosaudade",
+      "sha256_cert_fingerprints": [
+        "B9:46:61:C9:D6:92:AC:36:80:58:5E:4E:C4:D0:DB:20:9E:15:20:D0:4B:24:24:BE:33:39:8F:A4:52:B8:7D:9B"
+      ]
+    }
+  }
+]
+```
+
+📌 Verifique se o link abre publicamente:
+```
+https://ideiasbits.com.br/.well-known/assetlinks.json
+```
+
+Assim, o Android confiará no domínio e permitirá rodar sua PWA como Trusted Web Activity.
