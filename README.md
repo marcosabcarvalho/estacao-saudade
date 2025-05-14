@@ -199,3 +199,47 @@ https://marcosabcarvalho.github.io/.well-known/assetlinks.json
 
 Desenvolvido com carinho nostálgico por [Marcos A. B. de Carvalho](https://github.com/marcosabcarvalho)  
 Empacotado com ❤️ pela Amora (ChatGPT)
+
+
+
+
+Criar subdominio radio.ideiasbits.com.br
+
+
+✅ Passo 1 – Adicionar registro DNS tipo CNAME ou A
+
+    Vá até DNS > Gerenciamento de DNS no painel da Cloudflare.
+
+    Clique em Adicionar registro.
+
+    Preencha assim:
+
+🔸 Se quiser usar um registro CNAME:
+Campo	Valor
+Tipo	CNAME
+Nome	radio
+Destino	ideiasbits.com.br
+Proxy	☁️ Ativado (Com proxy)
+TTL	Auto
+✅ Passo 2 – Salvar e verificar
+
+    Salve o registro.
+
+    Verifique se o ícone da nuvem está laranja.
+
+    Espere de 1 a 5 minutos para propagação (geralmente é quase instantâneo na Cloudflare).
+
+✅ Passo 3 – Reaplicar ou confirmar a regra de redirecionamento
+
+Agora volte na aba das Regras de Página e:
+
+    Edite a regra já criada ou crie novamente, se quiser garantir.
+
+    Use os padrões:
+
+http://radio.ideiasbits.com.br/*
+https://radio.ideiasbits.com.br/*
+
+➡️ Ambos devem redirecionar para:
+
+https://ideiasbits.com.br/radio.html
