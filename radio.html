@@ -170,25 +170,44 @@
     </main>
   </div>
   <div>
-    <marquee behavior="scroll" direction="left" scrollamount="6" style="
+    <div class="led-banner">
+      <div class="led-text">
+        📘 <a href="ebook-faca-seu-pedal.html" target="_blank">Faça seu pedal</a> &nbsp;&nbsp; 🎸 <a href="chandler-valvulado.html" target="_blank">Chandler Valvulado</a> &nbsp;&nbsp; 📱 <a href="instalar.html" target="_blank">Instale a Rádio</a>
+      </div>
+    </div>
+    
+    <style>
+    .led-banner {
+      width: 100%;
       background: black;
-      color: #00ff00;
-      font-family: 'Courier New', monospace;
-      font-size: 18px;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      border-bottom: 2px solid red;
       padding: 10px 0;
-      border-bottom: 2px solid #00ff00;
-    ">
-      <a href="ebook-faca-seu-pedal.html" target="_blank" rel="noopener noreferrer"
-        style="color:#00ff00; text-decoration:none; margin-right:50px;">
-        📘 Faça seu pedal – veja o eBook online
-      </a>
-      <a href="chandler-valvulado.html" target="_blank" rel="noopener noreferrer" style="color:#00ff00; text-decoration:none; margin-right:50px;">
-        🎸 Conheça o Pedal Chandler Valvulado
-      </a>
-      <a href="instalar.html" target="_blank" rel="noopener noreferrer" style="color:#00ff00; text-decoration:none;">
-        📱 Instale nossa rádio no seu celular
-      </a>
-    </marquee>
+    }
+    
+    .led-text {
+      display: inline-block;
+      color: red;
+      font-family: 'Courier New', monospace;
+      font-size: 20px;
+      padding-left: 100%;
+      animation: scroll-led 20s linear infinite;
+    }
+    
+    .led-text a {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    @keyframes scroll-led {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+    </style>
+    
 
   </div>
 
