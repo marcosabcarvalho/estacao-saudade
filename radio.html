@@ -170,40 +170,50 @@
     </main>
   </div>
   <div>
-    <div class="led-banner">
-      <div class="led-text">
-        📘 <a href="ebook-faca-seu-pedal.html" target="_blank">Faça seu pedal</a> &nbsp;&nbsp; 🎸 <a href="chandler-valvulado.html" target="_blank">Chandler Valvulado</a> &nbsp;&nbsp; 📱 <a href="instalar.html" target="_blank">Instale a Rádio</a>
+
+    <div class="led-matrix">
+      <div class="led-scroll">
+        📘 <a href="ebook-faca-seu-pedal.html" target="_blank" rel="noopener noreferrer">Faça seu pedal</a> &nbsp;&nbsp;
+        🎸 <a href="chandler-valvulado.html" target="_blank" rel="noopener noreferrer">Chandler Valvulado</a> &nbsp;&nbsp;
+        📱 <a href="instalar.html" target="_blank" rel="noopener noreferrer">Instale a Rádio</a>
       </div>
     </div>
     
     <style>
-    .led-banner {
+    .led-matrix {
       width: 100%;
       background: black;
       overflow: hidden;
       white-space: nowrap;
-      box-sizing: border-box;
-      border-bottom: 2px solid red;
       padding: 10px 0;
+      box-shadow: 0 0 15px red inset;
     }
     
-    .led-text {
+    .led-scroll {
       display: inline-block;
-      color: red;
-      font-family: 'Courier New', monospace;
+      font-family: monospace;
       font-size: 20px;
       padding-left: 100%;
-      animation: scroll-led 20s linear infinite;
+      animation: scroll-led 18s linear infinite;
+      color: #ff0000;
+      text-shadow:
+        0 0 2px #ff0000,
+        0 0 5px #ff0000,
+        0 0 8px #ff0000;
     }
     
-    .led-text a {
-      color: red;
+    .led-scroll a {
+      color: #ff4444;
       text-decoration: none;
       font-weight: bold;
+      text-shadow:
+        0 0 2px #ff4444,
+        0 0 5px #ff4444,
+        0 0 8px #ff4444;
     }
     
     @keyframes scroll-led {
-      0% { transform: translateX(0%); }
+      0%   { transform: translateX(0%); }
       100% { transform: translateX(-100%); }
     }
     </style>
