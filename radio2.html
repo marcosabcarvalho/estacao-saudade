@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste de Rádios Brasileiras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    .station {
+      margin: 5px 0;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 4px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background: #fff;
+    }
+    button:hover {
+      background: #eee;
+    }
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎧 Testador de Rádios Brasileiras</h2>
+  <div id="stations"></div>
+  <audio id="player" controls autoplay></audio>
+
+  <script>
+    const stations = [
+      // Belo Horizonte
+      { name: "Band News BH", url: "http://servidor25.crossdigital.com.br:8000/bandnewsbelohorizonte" },
+      { name: "CBN BH", url: "http://wm-sgr-live.globo.com/sgr_off_cbnbh_live.wma" },
+      { name: "Guarani FM", url: "http://cdn.upx.net.br/listen/00108.wmx" },
+      { name: "Antena 1", url: "mms://wmedialive.telium.com.br/antenaum" },
+
+      // Brasilia
+      { name: "Band News BSB", url: "http://servidor25.crossdigital.com.br:8000/bandnewsbrasilia" },
+      { name: "CBN BSB", url: "http://wm-sgr-live.globo.com/sgr_off_cbnbsb_live.wma" },
+      { name: "Nova Brasil FM (BSB)", url: "http://187.17.67.228:9052" },
+
+      // Curitiba
+      { name: "Band News Curitiba", url: "http://servidor25.crossdigital.com.br:8000/bandnewscuritiba" },
+
+      // Porto Alegre
+      { name: "Band News POA", url: "http://servidor25.crossdigital.com.br:8000/bandnewsportoalegre" },
+      { name: "Ipanema FM", url: "http://p.mm.uol.com.br/ipanema_alta" },
+
+      // Rio de Janeiro
+      { name: "Band News RJ", url: "http://servidor25.crossdigital.com.br:8000/bandnewsrj" },
+      { name: "CBN RJ", url: "http://wm-sgr-live.globo.com/sgr_off_cbnfmrj_live.wma" },
+      { name: "JBFM", url: "mms://200.222.115.52/OiFM_JBFM" },
+
+      // São Paulo
+      { name: "Backstage Heavy Rock", url: "http://67.212.166.210:8424" },
+      { name: "Band News SP", url: "http://servidor25.crossdigital.com.br:8000/bandnewssp" },
+      { name: "Kiss FM", url: "http://75.126.86.2:8098/" },
+      { name: "Nativa", url: "http://servidor25.crossdigital.com.br:8000/nativafm" },
+
+      // Salvador
+      { name: "Band News Salvador", url: "http://servidor25.crossdigital.com.br:8000/bandnewssalvador" },
+    ];
+
+    const container = document.getElementById('stations');
+    const player = document.getElementById('player');
+
+    stations.forEach(st => {
+      const btn = document.createElement('button');
+      btn.className = 'station';
+      btn.textContent = st.name;
+      btn.onclick = () => {
+        player.src = st.url;
+        player.play().catch(err => console.warn("Erro ao tocar", err));
+      };
+      container.appendChild(btn);
+    });
+  </script>
+</body>
+</html>
