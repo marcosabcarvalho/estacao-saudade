@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Evitar cache para sempre carregar a versão mais recente -->
@@ -190,21 +191,19 @@
     overflow: hidden;
     white-space: nowrap;
     padding: 10px 0;
-    box-shadow: 0 0 15px #00ff00 inset;
+    box-shadow: 0 0 10px #00ff00 inset;
   }
 
   .led-scroll {
     display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 22px;
+    font-family: 'VT323', monospace;
+    font-size: 26px;
     padding-left: 100%;
     animation: scroll-led 18s linear infinite;
     color: #00ff00;
     text-shadow:
-      0 0 2px #00ff00,
-      0 0 4px #00ff00,
-      0 0 6px #33ff33,
-      0 0 8px #33ff33;
+      0 0 1px #00ff00,
+      0 0 2px #33ff33;
   }
 
   .led-scroll a {
@@ -212,18 +211,13 @@
     text-decoration: none;
     font-weight: bold;
     text-shadow:
-      0 0 2px #66ff66,
-      0 0 4px #66ff66,
-      0 0 6px #99ff99;
+      0 0 1px #66ff66,
+      0 0 2px #99ff99;
   }
 
   @keyframes scroll-led {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
   }
 </style>
     
