@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estação Saudade – Rádio Retrô</title>
   <link rel="manifest" href="manifest.json">
   <style>
@@ -11,24 +12,31 @@
       font-family: 'Georgia', serif;
       background-color: #fdf8f3;
     }
+
     header {
       background: #8b6f47;
       padding: 20px;
       color: white;
       text-align: center;
     }
+
     .container {
-      display: block; /* tiramos o flex */
+      display: block;
+      /* tiramos o flex */
     }
+
     .content {
-      width: 100%;    /* ocupa toda largura */
+      width: 100%;
+      /* ocupa toda largura */
       padding: 20px;
       box-sizing: border-box;
     }
+
     .style-select {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .style-select select {
       padding: 8px 12px;
       font-size: 16px;
@@ -36,6 +44,7 @@
       border: 1px solid #aaa;
       background: #fffaf0;
     }
+
     .radio-wrapper {
       background: #d6c9b7;
       border: 8px solid #aa9d8b;
@@ -43,8 +52,9 @@
       padding: 30px;
       max-width: 700px;
       margin: 0 auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
+
     .station-label {
       text-align: center;
       font-size: 20px;
@@ -52,6 +62,7 @@
       color: #4a392c;
       margin: 15px 0;
     }
+
     .scale {
       position: relative;
       height: 60px;
@@ -60,6 +71,7 @@
       border: 2px solid #8c7c68;
       border-radius: 8px;
     }
+
     .scale-marker {
       position: absolute;
       top: 0;
@@ -67,6 +79,7 @@
       width: 2px;
       background: #8c7c68;
     }
+
     .scale-labels {
       position: absolute;
       top: 64px;
@@ -76,6 +89,7 @@
       font-size: 10px;
       color: #5a3e2b;
     }
+
     .needle {
       position: absolute;
       top: -10px;
@@ -85,10 +99,12 @@
       left: 0;
       transition: left 0.3s ease;
     }
+
     audio {
       width: 100%;
       margin-top: 20px;
     }
+
     button.nav {
       margin: 15px 10px;
       padding: 10px 20px;
@@ -99,9 +115,11 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     button.nav:hover {
       background: #3e3027;
     }
+
     footer {
       text-align: center;
       padding: 15px;
@@ -111,6 +129,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>🎚️ Estação Saudade</h1>
@@ -149,6 +168,28 @@
         <audio id="player" controls></audio>
       </div>
     </main>
+  </div>
+  <div>
+    <marquee behavior="scroll" direction="left" scrollamount="6" style="
+      background: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      padding: 10px 0;
+      border-bottom: 2px solid #00ff00;
+    ">
+      <a href="ebook-faca-seu-pedal.html" target="_blank"
+        style="color:#00ff00; text-decoration:none; margin-right:50px;">
+        📘 Faça seu pedal – veja o eBook online
+      </a>
+      <a href="chandler-valvulado.html" target="_blank" style="color:#00ff00; text-decoration:none; margin-right:50px;">
+        🎸 Conheça o Pedal Chandler Valvulado
+      </a>
+      <a href="instalar.html" target="_blank" style="color:#00ff00; text-decoration:none;">
+        📱 Instale nossa rádio no seu celular
+      </a>
+    </marquee>
+
   </div>
 
   <footer>
@@ -227,4 +268,5 @@
     }
   </script>
 </body>
+
 </html>
