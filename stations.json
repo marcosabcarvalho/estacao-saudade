@@ -1,8 +1,28 @@
 {
   "Top Songs": [
     {
-      "name": "All-Time Favorites",
-      "stream": "https://sonotrig.com.br/all_musics.mp3"
+      "name": "All Favorites",
+      "stream": "https://sonotrig.com.br/top_songs_all.mp3"
+    },
+    {
+      "name": "TOP 1",
+      "stream": "https://sonotrig.com.br/top_songs_1.mp3"
+    },
+    {
+      "name": "TOP 2",
+      "stream": "https://sonotrig.com.br/top_songs_2.mp3"
+    },
+    {
+      "name": "TOP 3",
+      "stream": "https://sonotrig.com.br/top_songs_3.mp3"
+    },
+    {
+      "name": "TOP 4",
+      "stream": "https://sonotrig.com.br/top_songs_4.mp3"
+    },
+    {
+      "name": "TOP 5",
+      "stream": "https://sonotrig.com.br/top_songs_5.mp3"
     }
   ],
   "Oldies": [
