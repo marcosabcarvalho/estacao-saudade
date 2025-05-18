@@ -1,4 +1,10 @@
 {
+  "Top Songs": [
+    {
+      "name": "All-Time Favorites",
+      "stream": "https://sonotrig.com.br/all_musics.mp3"
+    }
+  ],
   "Oldies": [
     {
       "name": "Classic Hits 181",
