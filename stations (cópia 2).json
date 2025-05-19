@@ -25,80 +25,6 @@
       "stream": "https://sonotrig.com.br/top_songs_5.mp3"
     }
   ],
-  "Radio World": [
-    {
-      "name": "BBC World",
-      "stream": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_west_africa"
-    },
-    {
-      "name": "Radio Caroline",
-      "stream": "https://stream.radiocaroline.net/"
-    },
-    {
-      "name": "American Family Radio",
-      "stream": "https://mediaserver3.afa.net:8443/talk.mp4"
-    },
-    {
-      "name": "ABC Triple J NSW",
-      "stream": "https://live-radio01.mediahubaustralia.com/2TJW/aac/"
-    },
-    {
-      "name": "ABC Classic",
-      "stream": "https://live-radio02.mediahubaustralia.com/2FMW/aac"
-    },
-    {
-      "name": "ABC News Radio",
-      "stream": "https://live-radio01.mediahubaustralia.com/PBW/aac"
-    },
-    {
-      "name": "Virgin Radio - Pink Floyd",
-      "stream": "https://icy.unitedradio.it/VirginRogerWaters.mp3"
-    },
-    {
-      "name": "Exclusively - Pink Floyd Hits",
-      "stream": "https://streaming.exclusive.radio/er/pinkfloyd/icecast.audio"
-    },
-    {
-      "name": "Vagalume FM - O Melhor de Pink",
-      "stream": "https://stream.vagalume.fm/LOUNGE_128"
-    },
-    {
-      "name": "Classic Hits 103.3",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/WRQQFMAAC.aac"
-    },
-    {
-      "name": "Classic Hits 90.7 FM",
-      "stream": "https://ice9.securenetsystems.net/WKPW"
-    },
-    {
-      "name": "Kiss FM", 
-      "stream": "https://edge-bauerall-01-gos2.sharp-stream.com/kissnational.aac"
-    },
-    {
-      "name": "Kiss FM France",
-      "stream": "https://kissfmtoulondab.ice.infomaniak.ch/kissfmtoulondab-96.aac"
-    },
-    {
-      "name": "Kiss FM Mexico",
-      "stream": "https://webprod.sipse.com.mx:8080/kissfm"
-    },
-    {
-      "name": "Kiss FM 105.5",
-      "stream": "https://stream.revma.ihrhls.com/zc2321/hls.m3u8"
-    },
-    {
-      "name": "Kiss FM Australia",
-      "stream": "http://s9.nexuscast.com:8565/kissfm.aac"
-    },
-    {
-      "name": "Kiss FM Brasil",
-      "stream": "https://cloud1.cdnseguro.com:18462/"
-    },
-    {
-      "name": "France Musique",
-      "stream": "https://icecast.radiofrance.fr/francemusique-hifi.aac"
-    }
-  ],
   "Oldies": [
     {
       "name": "Classic Hits 181",
@@ -467,6 +393,84 @@
     {
       "name": "Christmas Swing",
       "stream": "https://listen.181fm.com/181-xswing_128k.mp3"
+    }
+  ],
+  "Radio World 1": [
+    {
+      "name": "BBC World",
+      "stream": "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_west_africa"
+    },
+    {
+      "name": "Radio Caroline",
+      "stream": "https://stream.radiocaroline.net/"
+    },
+    {
+      "name": "American Family Radio",
+      "stream": "https://mediaserver3.afa.net:8443/talk.mp4"
+    },
+    {
+      "name": "ABC Triple J NSW",
+      "stream": "https://live-radio01.mediahubaustralia.com/2TJW/aac/"
+    },
+    {
+      "name": "ABC Classic",
+      "stream": "https://live-radio02.mediahubaustralia.com/2FMW/aac"
+    },
+    {
+      "name": "ABC News Radio",
+      "stream": "https://live-radio01.mediahubaustralia.com/PBW/aac"
+    }
+  ],
+  "Radio World 2": [
+    {
+      "name": "Virgin Radio - Pink Floyd",
+      "stream": "https://icy.unitedradio.it/VirginRogerWaters.mp3"
+    },
+    {
+      "name": "Exclusively - Pink Floyd Hits",
+      "stream": "https://streaming.exclusive.radio/er/pinkfloyd/icecast.audio"
+    },
+    {
+      "name": "Vagalume FM - O Melhor de Pink",
+      "stream": "https://stream.vagalume.fm/LOUNGE_128"
+    },
+    {
+      "name": "Classic Hits 103.3",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/WRQQFMAAC.aac"
+    },
+    {
+      "name": "Classic Hits 90.7 FM",
+      "stream": "https://ice9.securenetsystems.net/WKPW"
+    },
+    {
+      "name": "Kiss FM", 
+      "stream": "https://edge-bauerall-01-gos2.sharp-stream.com/kissnational.aac"
+    }
+  ],
+  "Radio World 3": [
+    {
+      "name": "Kiss FM France",
+      "stream": "https://kissfmtoulondab.ice.infomaniak.ch/kissfmtoulondab-96.aac"
+    },
+    {
+      "name": "Kiss FM Mexico",
+      "stream": "https://webprod.sipse.com.mx:8080/kissfm"
+    },
+    {
+      "name": "Kiss FM 105.5",
+      "stream": "https://stream.revma.ihrhls.com/zc2321/hls.m3u8"
+    },
+    {
+      "name": "Kiss FM Australia",
+      "stream": "http://s9.nexuscast.com:8565/kissfm.aac"
+    },
+    {
+      "name": "Kiss FM Brasil",
+      "stream": "https://cloud1.cdnseguro.com:18462/"
+    },
+    {
+      "name": "France Musique",
+      "stream": "https://icecast.radiofrance.fr/francemusique-hifi.aac"
     }
   ],
   "Radio BR": [
