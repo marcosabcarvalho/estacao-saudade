@@ -395,80 +395,6 @@
       "stream": "https://listen.181fm.com/181-xswing_128k.mp3"
     }
   ],
-  "Radio 1": [
-    {
-      "name": "Antena 1",
-      "stream": "https://radioking.com/play/antena-1-campinas"
-    },
-    {
-      "name": "Jovem Pan FM",
-      "stream": "https://ice.fabricahost.com.br/jovempanavare"
-    },
-    {
-      "name": "Rádio CBN",
-      "stream": "https://radio.saopaulo01.com.br/8332/stream"
-    },
-    {
-      "name": "Jovem Pan News AM",
-      "stream": "https://superaudio.radio.br/radio/8110/stream"
-    },
-    {
-      "name": "Band News FM",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC.aac"
-    }
-  ],
-  "Radio 2": [
-    {
-      "name": "Transamérica FM Recife",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_RECAAC.aac"
-    },
-    {
-      "name": "92 FM Porto Alegre",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/ATL_FLOAAC.aac"
-    },
-    {
-      "name": "Nova Brasil FM",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_BSBAAC.aac"
-    },
-    {
-      "name": "Rádio Itatiaia",
-      "stream": "https://8903.brasilstream.com.br/stream"
-    },
-    {
-      "name": "Rádio Inconfidência AM",
-      "stream": "https://ssl.zoeweb.net/proxy/inconfidencia2?mp=/stream"
-    },
-    {
-      "name": "Rádio JK FM",
-      "stream": "https://radio.saopaulo01.com.br/8054/stream"
-    }
-  ],
-  "Radio 3": [
-    {
-      "name": "Rádio Transamérica Pop",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_RJAAC.aac"
-    },
-    {
-      "name": "89 FM a Rádio Rock SP",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FMAAC.aac"
-    },
-    {
-      "name": "Rádio Atlantico Sul",
-      "stream": "https://streaming.livespanel.com:21057/stream"
-    },
-    {
-      "name": "Transamérica Hits",
-      "stream": "https://8056.brasilstream.com.br/stream"
-    },
-    {
-      "name": "Rádio Central",
-      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCENTRAL_AMAAC.aac"
-    },
-    {
-      "name": "Dumont FM",
-      "stream": "https://rrdns-raizesfm.webnow.com.br/dumont.aac"
-    }
-  ],
   "Radio World 1": [
     {
       "name": "BBC World",
@@ -517,7 +443,7 @@
       "stream": "https://ice9.securenetsystems.net/WKPW"
     },
     {
-      "name": "Kiss FM",
+      "name": "Kiss FM", 
       "stream": "https://edge-bauerall-01-gos2.sharp-stream.com/kissnational.aac"
     }
   ],
@@ -545,6 +471,72 @@
     {
       "name": "France Musique",
       "stream": "https://icecast.radiofrance.fr/francemusique-hifi.aac"
+    }
+  ],
+  "Radio 1": [
+    {
+      "name": "Antena 1",
+      "stream": "https://radioking.com/play/antena-1-campinas"
+    },
+    {
+      "name": "Jovem Pan FM",
+      "stream": "https://ice.fabricahost.com.br/jovempanavare"
+    },
+    {
+      "name": "Rádio CBN",
+      "stream": "https://radio.saopaulo01.com.br/8332/stream"
+    },
+    {
+      "name": "Jovem Pan News AM",
+      "stream": "https://superaudio.radio.br/radio/8110/stream"
+    },
+    {
+      "name": "Band News FM",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC.aac"
+    },
+    {
+      "name": "Transamérica FM Recife",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_RECAAC.aac"
+    },
+    {
+      "name": "92 FM Porto Alegre",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/ATL_FLOAAC.aac"
+    },
+    {
+      "name": "Nova Brasil FM",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_BSBAAC.aac"
+    },
+    {
+      "name": "Rádio Itatiaia",
+      "stream": "https://8903.brasilstream.com.br/stream"
+    },
+    {
+      "name": "Rádio Inconfidência AM",
+      "stream": "https://ssl.zoeweb.net/proxy/inconfidencia2?mp=/stream"
+    },
+    {
+      "name": "Rádio JK FM",
+      "stream": "https://radio.saopaulo01.com.br/8054/stream"
+    },
+    {
+      "name": "Rádio Transamérica Pop",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_RJAAC.aac"
+    },
+    {
+      "name": "89 FM a Rádio Rock SP",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FMAAC.aac"
+    },
+    {
+      "name": "Rádio Atlantico Sul",
+      "stream": "https://streaming.livespanel.com:21057/stream"
+    },
+    {
+      "name": "Rádio Central",
+      "stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOCENTRAL_AMAAC.aac"
+    },
+    {
+      "name": "Dumont FM",
+      "stream": "https://rrdns-raizesfm.webnow.com.br/dumont.aac"
     }
   ]
 }
