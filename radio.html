@@ -232,14 +232,15 @@
 
   <script>
     let stationGroups = {}, stations = [], currentStation = 0;
-
-    fetch('stations.json')
+  
+    // ⚠️ Linha modificada para evitar cache
+    fetch('stations.json?v=' + new Date().getTime())
       .then(res => res.json())
       .then(json => {
         stationGroups = json;
         init();
       });
-
+  
     function init() {
       const sel = document.getElementById('styleSelect');
       sel.innerHTML = '<option value="">Selecione um estilo…</option>';
@@ -249,23 +250,23 @@
         o.textContent = style;
         sel.appendChild(o);
       });
-
+  
       const prefs = JSON.parse(localStorage.getItem('estacaoPrefs') || '{}');
       if (prefs.style && stationGroups[prefs.style]) {
         sel.value = prefs.style;
         loadStations(prefs.style, prefs.index || 0);
       }
-
+  
       sel.addEventListener('change', () => loadStations(sel.value, 0));
     }
-
+  
     function loadStations(style, index = 0) {
       stations = stationGroups[style] || [];
       currentStation = index;
       atualizarRadio();
       localStorage.setItem('estacaoPrefs', JSON.stringify({ style, index: currentStation }));
     }
-
+  
     function atualizarRadio() {
       if (!stations.length) return;
       const { name, stream } = stations[currentStation];
@@ -282,19 +283,19 @@
         index: currentStation
       }));
     }
-
+  
     function sintonizarProxima() {
       if (!stations.length) return;
       currentStation = (currentStation + 1) % stations.length;
       atualizarRadio();
     }
-
+  
     function sintonizarAnterior() {
       if (!stations.length) return;
       currentStation = (currentStation - 1 + stations.length) % stations.length;
       atualizarRadio();
     }
-  </script>
+  </script>  
 
   <script>
     if ('serviceWorker' in navigator) {
